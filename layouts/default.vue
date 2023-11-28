@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import '@mdi/font/css/materialdesignicons.css'
 import LanguageMenu from "@/components/LanguageMenu";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
