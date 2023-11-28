@@ -63,7 +63,9 @@ export default {
   vuetify: {
     customVariables: ['@/assets/variables.scss'],
     treeShake: true,
-    icons: 'mdi',
+    icons: {
+      iconfont: 'mdiSvg',
+    },
     theme: {
       dark: true,
       themes: {
