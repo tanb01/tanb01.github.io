@@ -13,7 +13,7 @@ export default {
     greeting: "Hola,",
     name: "Soy Ben.",
     position: "Consultor de estrategia de día,",
-    firstTitle: "Ingeniero de ciberseguridad",
+    firstTitle: "ingeniero de ciberseguridad",
     secondTitle: "desarrollador de software",
     thirdTitle: "desarrollador web",
     endQuote: "de noche.",

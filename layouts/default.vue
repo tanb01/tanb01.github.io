@@ -31,7 +31,7 @@
       </v-row>
     </v-app-bar>
     <v-main :class="[$vuetify.breakpoint.lgAndUp ? 'ma-0 pa-0' : 'ma-0 pa-0']">
-      <v-container fluid>
+      <v-container fluid class="main-container">
         <Nuxt />
       </v-container>
     </v-main>
@@ -132,10 +132,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 html {
   scroll-behavior: smooth;
-  background-color: black;
+}
+
+.main-container {
+  background-color: $mc-bg-color;
 }
 
 .v-navigation-drawer {
