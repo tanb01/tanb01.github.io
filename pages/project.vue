@@ -1,16 +1,16 @@
 <template>
   <v-sheet class="page pageProject white--text" min-height="100vh">
-    <v-row justify="center">
+    <v-row justify="center" no-gutters>
       <v-col align="center">
         <h1 v-html="$t('projects.title')" />
       </v-col>
     </v-row>
-    <v-row>
+    <v-row no-gutters>
       <v-col class="text-center pa-4">
         <p :class="[$vuetify.breakpoint.mdAndUp ? 'quote' : 'h4 font-italic']" v-html="$t('projects.quote')" />
       </v-col>
     </v-row>
-    <v-row>
+    <v-row no-gutters>
       <v-col>
         <ProjectSection :projects="projects" />
       </v-col>

@@ -1,6 +1,6 @@
 <template>
   <v-card class="project-card darken">
-    <v-row>
+    <v-row no-gutters>
       <v-col>
         <h3 class="title white--text">{{ project.name }}</h3>
         <h5 class="subtitle-text">
@@ -12,7 +12,7 @@
         </h5>
       </v-col>
     </v-row>
-    <v-row>
+    <v-row no-gutters>
       <v-col>
         <div>
           <v-chip v-for="tag in project.tags" :key="project.id + tag" class="ma-1 accent2">

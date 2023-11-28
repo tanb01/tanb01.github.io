@@ -17,7 +17,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar app color="transparent" elevation="0" hide-on-scroll>
-      <v-row class="align-center">
+      <v-row class="align-center" no-gutters>
         <v-col cols="8" class="d-flex offset-sm-2 offset-md-2 offset-lg-0 offset-xl-0"
           :class="$vuetify.breakpoint.lgAndUp ? 'justify-start' : 'justify-center'">
           <h2 v-text="title" class="v-app-bar-title" :class="$vuetify.breakpoint.xsOnly ? 'text-h6' : ''" />
@@ -31,9 +31,7 @@
       </v-row>
     </v-app-bar>
     <v-main :class="[$vuetify.breakpoint.lgAndUp ? 'ma-0 pa-0' : 'ma-0 pa-0']">
-      <v-container fluid class="main-container">
-        <Nuxt />
-      </v-container>
+      <Nuxt />
     </v-main>
     <ScrollToTopButton v-bind:lastScrollPosition="lastScrollPosition" />
     <Footer />
@@ -135,10 +133,7 @@ export default {
 <style lang="scss">
 html {
   scroll-behavior: smooth;
-}
-
-.main-container {
-  background-color: $mc-bg-color;
+  background-color: $html-bg-color;
 }
 
 .v-navigation-drawer {

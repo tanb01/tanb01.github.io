@@ -1,14 +1,14 @@
 <template>
   <v-card class="school-card elevation-0" color="transparent">
-    <v-row>
+    <v-row no-gutters>
       <v-col>
-        <v-row class="school-logo-container">
+        <v-row class="school-logo-container" no-gutters>
           <v-img class="school-logo" :src="require(`@/assets/img/${school.logo}`)" />
         </v-row>
-        <v-row class="justify-center">
+        <v-row class="justify-center" no-gutters>
           <h3 class="title white--text">{{ school.name }}</h3>
         </v-row>
-        <v-row class="justify-center">
+        <v-row class="justify-center" no-gutters>
           <v-col class="justify-center text-center">
             <h4 class="subtitle white--text">
               {{ school.degree }}
@@ -18,7 +18,7 @@
             </h4>
           </v-col>
         </v-row>
-        <v-row class="justify-center">
+        <v-row class="justify-center" no-gutters>
           <h5 class="subtitle-text">
             {{
               school.startDate == school.endDate ? school.startDate :

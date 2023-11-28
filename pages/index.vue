@@ -1,11 +1,11 @@
 <template>
   <div>
-    <v-row>
+    <v-row no-gutters>
       <v-col class="pa-0 rounded-0">
         <v-card>
           <v-parallax class="hero-parallax rounded-0" :src="require('@/assets/img/low-poly-grid-banner.svg')"
             height="100%">
-            <v-row align="center" justify="center">
+            <v-row align="center" justify="center" no-gutters>
               <v-col
                 :class="[$vuetify.breakpoint.mdAndUp ? 'text-left pb-16 pl-16 pt-16 mt-16' : 'text-left pa-4 mt-16 pt-16']"
                 cols="12" md="10" sm="7">
@@ -38,22 +38,22 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-row id="about" justify="center" align="center">
+    <v-row id="about" justify="center" align="center" no-gutters>
       <v-col class="pa-0">
         <AboutMePage />
       </v-col>
     </v-row>
-    <v-row id="projects" justify="center" align="center">
+    <v-row id="projects" justify="center" align="center" no-gutters>
       <v-col class="pa-0">
         <ProjectPage />
       </v-col>
     </v-row>
-    <v-row id="experience" justify="center" align="center">
+    <v-row id="experience" justify="center" align="center" no-gutters>
       <v-col class="pa-0">
         <ExperiencePage />
       </v-col>
     </v-row>
-    <v-row id="education" justify="center" align="center">
+    <v-row id="education" justify="center" align="center" no-gutters>
       <v-col class="pa-0">
         <EducationPage />
       </v-col>

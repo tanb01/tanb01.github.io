@@ -1,7 +1,7 @@
 <template>
   <v-card class="experience-card darken">
-    <v-row class="pa-2">
-      <v-row>
+    <v-row class="pa-2" no-gutters>
+      <v-row no-gutters>
         <v-col class="experience-logo-container" cols="12" lg="3" md="2" sm="2">
           <v-img class="experience-logo" width="100px" :src="require(`@/assets/img/${experience.logo}`)" />
         </v-col>
