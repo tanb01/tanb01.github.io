@@ -58,12 +58,6 @@ export default {
       return dayjs(date).calendar();
     },
   },
-  mounted() {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start();
-      setTimeout(() => this.$nuxt.$loading.finish(), 500);
-    });
-  },
   methods: {
     duration(startDate, endDate) {
       const sD = dayjs(startDate);
