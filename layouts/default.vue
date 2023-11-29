@@ -16,7 +16,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app color="transparent" elevation="0" hide-on-scroll>
+    <v-app-bar app :color="navColor" elevation="0" hide-on-scroll>
       <v-row class="align-center" no-gutters>
         <v-col cols="8" class="d-flex offset-sm-2 offset-md-2 offset-lg-0 offset-xl-0"
           :class="$vuetify.breakpoint.lgAndUp ? 'justify-start' : 'justify-center'">
@@ -56,6 +56,7 @@ export default {
       title: "BENJAMIN TAN",
       drawer: true,
       mini: true,
+      navColor: 'transparent',
       lastScrollPosition: 0,
       items: [
         {
@@ -93,6 +94,9 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
+    window.onscroll = () => {
+      this.changeNavColor();
+    };
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.onScroll);
@@ -125,8 +129,17 @@ export default {
           })
         }
       }
+    },
+    changeNavColor() {
+      if (
+        document.body.scrollTop > 100 || document.documentElement.scrollTop > 100
+      ) {
+        this.navColor = '#15131f';
+      } else {
+        this.navColor = 'transparent';
+      }
     }
-  },
+  }
 };
 </script>
 
@@ -158,12 +171,6 @@ html {
   left: 0px !important;
   position: fixed;
   transform: translate3d(0, 0, 0);
-  transition: 0.2s all ease-out;
-}
-
-.v-app-bar.navbar--hidden {
-  box-shadow: none;
-  transform: translate3d(0, -100%, 0) !important;
   transition: 0.2s all ease-out;
 }
 
