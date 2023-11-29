@@ -54,7 +54,7 @@ export default {
   data() {
     return {
       title: "BENJAMIN TAN",
-      drawer: true,
+      drawer: this.isMobile,
       mini: true,
       navColor: 'transparent',
       lastScrollPosition: 0,
@@ -92,14 +92,21 @@ export default {
       ],
     };
   },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll);
+
+    if (typeof window === 'undefined')
+      return window.removeEventListener('resize', this.onResize, { passive: true })
+  },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
+
     window.onscroll = () => {
       this.changeNavColor();
     };
-  },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.onScroll);
+    
+    this.onResize()
+    window.addEventListener('resize', this.onResize, { passive: true })
   },
   methods: {
     onScroll() {
@@ -138,7 +145,10 @@ export default {
       } else {
         this.navColor = 'transparent';
       }
-    }
+    },
+    onResize() {
+      this.isMobile = window.innerWidth < 1024
+    },
   }
 };
 </script>
