@@ -1,6 +1,6 @@
 <template>
   <v-card class="project-card darken">
-    <v-row no-gutters>
+    <v-row no-gutters class="mb-4">
       <v-col>
         <h3 class="title white--text">{{ project.name }}</h3>
         <h5 class="subtitle-text">

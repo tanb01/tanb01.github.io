@@ -5,10 +5,10 @@
         <v-row class="school-logo-container" no-gutters>
           <v-img class="school-logo" :src="require(`@/assets/img/${school.logo}`)" />
         </v-row>
-        <v-row class="justify-center" no-gutters>
+        <v-row class="justify-center mb-4" no-gutters>
           <h3 class="title white--text">{{ school.name }}</h3>
         </v-row>
-        <v-row class="justify-center" no-gutters>
+        <v-row class="justify-center mb-2" no-gutters>
           <v-col class="justify-center text-center">
             <h4 class="subtitle white--text">
               {{ school.degree }}

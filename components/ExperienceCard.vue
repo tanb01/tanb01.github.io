@@ -5,8 +5,8 @@
         <v-col class="experience-logo-container" cols="12" lg="3" md="2" sm="2">
           <v-img class="experience-logo" width="100px" :src="require(`@/assets/img/${experience.logo}`)" />
         </v-col>
-        <v-col>
-          <h3 class="title white--text">{{ experience.position }}</h3>
+        <v-col :class="[$vuetify.breakpoint.xsOnly ? ' text-center mt-2' : 'mt-2 ml-4']">
+          <h3 class="title white--text mb-1">{{ experience.position }}</h3>
           <h4 class="subtitle white--text">
             {{ experience.company }}
           </h4>
