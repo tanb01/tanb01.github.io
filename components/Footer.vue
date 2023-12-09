@@ -1,5 +1,5 @@
 <template>
-  <v-footer padless elevation="10">
+  <v-footer padless>
     <v-card flat tile class="flex text-center">
       <v-card-text class="footer-style white--text text-subtitle-1">
         <v-card-text>
