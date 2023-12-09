@@ -67,7 +67,7 @@ export default {
 .experience-card {
   margin: 0 auto;
   max-width: 600px;
-  padding: 20px;
+  padding: 5px;
   transition: all 0.2s linear;
   border-radius: 4px;
 }
