@@ -3,7 +3,13 @@
     <v-row class="pa-2" no-gutters>
       <v-row no-gutters>
         <v-col class="experience-logo-container" cols="12" lg="3" md="2" sm="2">
-          <v-img class="experience-logo" width="100px" :src="require(`@/assets/img/${experience.logo}`)" />
+          <v-img class="experience-logo" width="100px" :src="require(`@/assets/img/${experience.logo}`)">
+            <template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular indeterminate color="complement" />
+              </v-row>
+            </template>
+          </v-img>
         </v-col>
         <v-col :class="[$vuetify.breakpoint.xsOnly ? ' text-center mt-2' : 'mt-2 ml-4']">
           <h3 class="title white--text mb-1">{{ experience.position }}</h3>

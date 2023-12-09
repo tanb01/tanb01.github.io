@@ -3,7 +3,13 @@
     <v-row no-gutters>
       <v-col>
         <v-row class="school-logo-container" no-gutters>
-          <v-img class="school-logo" :src="require(`@/assets/img/${school.logo}`)" />
+          <v-img class="school-logo" :src="require(`@/assets/img/${school.logo}`)">
+            <template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular indeterminate color="complement" />
+              </v-row>
+            </template>
+          </v-img>
         </v-row>
         <v-row class="justify-center mb-4" no-gutters>
           <h3 class="title white--text">{{ school.name }}</h3>
