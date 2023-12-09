@@ -11,7 +11,7 @@
           </v-icon>
         </v-btn>
       </template>
-      <v-list>
+      <v-list :dense="$vuetify.breakpoint.xsOnly">
         <v-list-item v-for="(item, index) in  items" :key="index" :to="switchLocalePath(item.locale)" exact>
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
