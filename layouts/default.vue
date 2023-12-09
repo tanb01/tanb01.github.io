@@ -20,7 +20,9 @@
       <v-row class="align-center" no-gutters>
         <v-col cols="8" class="d-flex offset-sm-2 offset-md-2 offset-lg-0 offset-xl-0"
           :class="$vuetify.breakpoint.lgAndUp ? 'justify-start' : 'justify-center'">
-          <h2 v-text="title" class="v-app-bar-title" :class="$vuetify.breakpoint.xsOnly ? 'text-h6' : ''" />
+          <nuxt-link :to="localePath('/')" @click.native="handleScroll('home')">
+            <h2 v-text="title" class="v-app-bar-title white--text" :class="$vuetify.breakpoint.xsOnly ? 'text-h6' : ''" />
+          </nuxt-link>
         </v-col>
         <v-col cols="1" class="d-flex justify-end ml-auto" :class="$vuetify.breakpoint.xsOnly ? 'pr-8' : ''">
           <LanguageMenu />
@@ -104,7 +106,7 @@ export default {
     window.onscroll = () => {
       this.changeNavColor();
     };
-    
+
     this.onResize()
     window.addEventListener('resize', this.onResize, { passive: true })
   },
