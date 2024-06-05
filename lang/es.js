@@ -13,7 +13,7 @@ export default {
     greeting: "Hola,",
     name: "Soy Ben.",
     position: "Consultor de estrategia de día,",
-    firstTitle: "ingeniero de ciberseguridad",
+    firstTitle: "Ingeniero de ciberseguridad",
     secondTitle: "desarrollador de software",
     thirdTitle: "desarrollador web",
     endQuote: "de noche.",
@@ -92,7 +92,8 @@ export default {
             tags: [
               "Ciberseguridad",
               "Confianza cero",
-              "Confianza y seguridad digital"
+              "Confianza y seguridad digital",
+              "Microaprendizaje"
             ],
             id: "2"
           },
@@ -108,6 +109,23 @@ export default {
               "Investigación"
             ],
             id: "1"
+          },
+          {
+            name: "Estrategia de sensibilización cibernética para una empresa multinacional",
+            startDate: "2024-01-08",
+            endDate: "2024-05-31",
+            city: "Nanterre",
+            description: "Llevó a cabo una evaluación de la sensibilización cibernética y desarrolló una estrategia de 3 años con un equipo de colegas. Actuó como PMO para facilitar la integración y adopción de una nueva plataforma de suplantación de identidad, OutThink. Incorporó a más de 44 colaboradores en Europa, APAC, LATAM y NA en inglés, francés y español.",
+            country: "Francia",
+            tags: [
+              "Consultoría estratégica",
+              "Concienciación cibernética",
+              "Cultura de la ciberseguridad",
+              "Suplantación de identidad",
+              "OutThink",
+              "Oficina de Gestión de Proyectos"
+            ],
+            id: "6"
           }
         ],
         engineering: [

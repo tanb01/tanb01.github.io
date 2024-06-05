@@ -91,7 +91,8 @@ export default {
             tags: [
               "Cybersécurité",
               "Confiance zéro",
-              "Confiance et sécurité numérique"
+              "Confiance et sécurité numérique",
+              "Microapprentissage"
             ],
             id: "2"
           },
@@ -107,6 +108,23 @@ export default {
               "Recherche"
             ],
             id: "1"
+          },
+          {
+            name: "Stratégie de sensibilisation à la cyber sécurité pour une entreprise multinationale",
+            startDate: "2024-01-08",
+            endDate: "2024-05-31",
+            city: "Nanterre",
+            description: "A mené une évaluation de la sensibilisation à la cybersécurité et a développé une stratégie sur 3 ans avec une équipe de collègues. A agi en tant que PMO pour faciliter l'intégration et l'adoption d'une nouvelle plateforme de phishing, OutThink. A intégré plus de 44 collaborateurs en Europe, APAC, LATAM, NA en anglais, français et espagnol.",
+            country: "France",
+            tags: [
+              "Conseil en stratégie",
+              "Sensibilisation à la cybersécurité",
+              "Culture de la cybersécurité ",
+              "Hammeçonnage",
+              "OutThink",
+              "Coordinateur de projet"
+            ],
+            id: "6"
           }
         ],
         engineering: [

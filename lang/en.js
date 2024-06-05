@@ -91,7 +91,8 @@ export default {
             tags: [
               "Cybersecurity",
               "Zero Trust",
-              "Digital Trust & Security"
+              "Digital Trust & Security",
+              "Microlearning"
             ],
             id: "2"
           },
@@ -107,6 +108,23 @@ export default {
               "Research"
             ],
             id: "1"
+          },
+          {
+            name: "Cyber awareness strategy for a multinational firm",
+            startDate: "2024-01-08",
+            endDate: "2024-05-31",
+            city: "Nanterre",
+            description: "Conducted a cybersecurity awareness assessment and developed a 3-year strategy with a team of colleagues. Acted as PMO to facilitate, the integration and adoption of a new phishing platform, OutThink. Onboarded 44+ collaborators in Europe, APAC, LATAM,  NA in English, French and Spanish.",
+            country: "France",
+            tags: [
+              "Strategy consulting",
+              "Cyber awareness",
+              "Cybersecurity culture",
+              "Phishing",
+              "OutThink",
+              "PMO"
+            ],
+            id: "6"
           }
         ],
         engineering: [
