@@ -8,12 +8,12 @@
     <v-tabs-items v-model="tab" id="custom-tab-items">
       <v-tab-item key=0 :value="'tab-1'">
         <v-container class="fill-height pa-0" justify-center>
-          <ProjectCard class="ma-4" v-for="project in projects[0].consulting" :key="project.id" :project="project" />
+          <ProjectCard class="ma-4" v-for="project in sortedConsultingProjects" :key="project.id" :project="project" />
         </v-container>
       </v-tab-item>
       <v-tab-item key=1 :value="'tab-2'">
         <v-container class="fill-height pa-0" justify-center>
-          <ProjectCard class="ma-4" v-for="project in projects[0].engineering" :key="project.id" :project="project" />
+          <ProjectCard class="ma-4" v-for="project in sortedEngineeringProjects" :key="project.id" :project="project" />
         </v-container>
       </v-tab-item>
     </v-tabs-items>
@@ -36,6 +36,14 @@ export default {
       tab: null,
     }
   },
+  computed: {
+    sortedConsultingProjects() {
+      return this.projects[0].consulting.slice().sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
+    },
+    sortedEngineeringProjects() {
+      return this.projects[0].engineering.slice().sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
+    }
+  }
 }
 </script>
 
