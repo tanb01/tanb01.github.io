@@ -26,6 +26,7 @@
   "devDependencies": {
     "@mdi/font": "^7.3.67",
     "@nuxtjs/i18n": "^7.3.1",
-    "@nuxtjs/vuetify": "^1.12.3"
+    "@nuxtjs/vuetify": "^1.12.3",
+    "vue-masonry-wall": "^0.3.2"
   }
 }
