@@ -7,13 +7,23 @@
     </v-tabs>
     <v-tabs-items v-model="tab" id="custom-tab-items">
       <v-tab-item key=0 :value="'tab-1'">
-        <v-container class="fill-height pa-0" justify-center>
-          <ProjectCard class="ma-4" v-for="project in sortedConsultingProjects" :key="project.id" :project="project" />
+        <v-container class="fill-height pa-4" justify-center>
+          <vue-masonry-wall :items="sortedConsultingProjects" :options="{ width: 600, padding: 16 }"
+            :ssr="{ columns: 3 }">
+            <template v-slot:default="{ item }">
+              <ProjectCard :key="item.id" :project="item" />
+            </template>
+          </vue-masonry-wall>
         </v-container>
       </v-tab-item>
       <v-tab-item key=1 :value="'tab-2'">
-        <v-container class="fill-height pa-0" justify-center>
-          <ProjectCard class="ma-4" v-for="project in sortedEngineeringProjects" :key="project.id" :project="project" />
+        <v-container class="fill-height pa-4" justify-center>
+          <vue-masonry-wall :items="sortedEngineeringProjects" :options="{ width: 600, padding: 16 }"
+            :ssr="{ columns: 3 }">
+            <template v-slot:default="{ item }">
+              <ProjectCard :key="item.id" :project="item" />
+            </template>
+          </vue-masonry-wall>
         </v-container>
       </v-tab-item>
     </v-tabs-items>
@@ -22,6 +32,7 @@
 
 <script>
 import ProjectCard from '@/components/ProjectCard';
+import VueMasonryWall from 'vue-masonry-wall';
 
 export default {
   name: "ProjectSection",
@@ -29,7 +40,8 @@ export default {
     projects: [],
   },
   components: {
-    ProjectCard
+    ProjectCard,
+    VueMasonryWall
   },
   data() {
     return {
@@ -49,8 +61,8 @@ export default {
 
 <style lang="scss">
 .projectSection {
-  max-width: 1600px;
-  min-height: 700px;
+  // max-width: 1600px;
+  // min-height: 700px;
 }
 
 #custom-tab-items {
