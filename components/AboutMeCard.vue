@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <div class="about-card white--text font-weight-thin"
-      :class="[$vuetify.breakpoint.mdAndUp ? 'headline font-weight-thin pa-10' : 'text-body-1 pa-4 font-weight-thin']"
+    <div class="about-card white--text font-weight-regular"
+      :class="[$vuetify.breakpoint.mdAndUp ? 'headline font-weight-regular pa-10' : 'text-body-1 pa-4 font-weight-regular']"
       v-html="$t('about.description')" />
   </v-container>
 </template>
