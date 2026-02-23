@@ -9,29 +9,32 @@
               <v-col
                 :class="[$vuetify.breakpoint.mdAndUp ? 'text-left pb-16 pl-16 pt-16 mt-16' : 'text-left pa-4 mt-16 pt-16']"
                 cols="12" md="10" sm="7">
-                <h2 v-html="$t('hero.greeting')" :class="[$vuetify.breakpoint.mdAndUp ? 'h3-message' : 'h3-message']" />
-                <h1 v-html="$t('hero.name')" :class="[$vuetify.breakpoint.mdAndUp ? 'h1-message' : 'h2-message']" />
+                <h2 v-html="$t('hero.greeting')" :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h3-message']" />
+                <h1 v-html="$t('hero.name')" :class="[$vuetify.breakpoint.mdAndUp ? 'h1-message' : 'h3-message']" />
                 <h2 v-html="$t('hero.position')"
                   :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message h2-message-opacity' : 'h4-message h2-message-opacity']" />
-                <v-carousel continous cycle vertical :interval="3000" :show-arrows="false" hide-delimiters
+                <h2 v-html="$t('hero.endQuote')" :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h4-message']" />
+                <v-carousel continous cycle vertical reverse :interval="3000" :show-arrows="false" hide-delimiters
                   hide-delimiter-background disabled height="100%">
-                  <v-carousel-item>
-                    <h2 v-html="$t('hero.firstTitle')"
-                      :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h3-message']" />
-                  </v-carousel-item>
-                  <v-carousel-item>
-                    <h2 v-html="$t('hero.secondTitle')"
-                      :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h3-message']" />
-                  </v-carousel-item>
-                  <v-carousel-item>
-                    <h2 v-html="$t('hero.thirdTitle')"
-                      :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h3-message']" />
-                  </v-carousel-item>
+                  <v-row no-gutters>
+                    <v-col>
+                      <v-carousel-item>
+                        <h2 v-html="$t('hero.firstTitle')"
+                          :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h5-message']" />
+                      </v-carousel-item>
+                      <v-carousel-item>
+                        <h2 v-html="$t('hero.secondTitle')"
+                          :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h5-message']" />
+                      </v-carousel-item>
+                      <v-carousel-item>
+                        <h2 v-html="$t('hero.thirdTitle')"
+                          :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h5-message']" />
+                      </v-carousel-item>
+                    </v-col>
+                  </v-row>
                 </v-carousel>
-                <h2 v-html="$t('hero.endQuote')"
-                  :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message h2-message-opacity' : 'h3-message h2-message-opacity']" />
                 <h3 v-html="$t('hero.objective')"
-                  :class="[$vuetify.breakpoint.mdAndUp ? 'text-h4 mt-8 ' : 'text-h6 mt-8']" />
+                  :class="[$vuetify.breakpoint.mdAndUp ? 'text-h4 mt-12' : 'text-h6 mt-6']" />
               </v-col>
             </v-row>
           </v-parallax>
@@ -103,6 +106,11 @@ export default {
 .h4-message {
   font-weight: 300px;
   font-size: 1.75rem;
+}
+
+.h4-message {
+  font-weight: 300px;
+  font-size: 1.25rem;
 }
 
 .hero-parallax {

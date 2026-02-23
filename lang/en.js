@@ -12,12 +12,12 @@ export default {
   hero: {
     greeting: "Hi,",
     name: "I'm Ben.",
-    position: "Strategy consultant by day,",
-    firstTitle: "cybersecurity engineer",
-    secondTitle: "software developer",
-    thirdTitle: "web developer",
-    endQuote: "by night.",
-    objective: "Consulting and developing secure projects for humans around the world.",
+    position: "Strategy and Digital Transformation Consultant",
+    firstTitle: "cybersecurity awareness",
+    secondTitle: "post-quantum cryptography",
+    thirdTitle: "cloud strategy",
+    endQuote: "Advising CIOs on ",
+    objective: "Experienced in supporting large organizations on high-stakes transformation programs.",
   },
   about: {
     title: "About Me",
