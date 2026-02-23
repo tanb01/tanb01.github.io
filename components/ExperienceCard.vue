@@ -1,5 +1,5 @@
 <template>
-  <v-card class="experience-card darken">
+  <v-card class="experience-card elevation-0">
     <v-row class="pa-2" no-gutters>
       <v-row no-gutters>
         <v-col class="experience-logo-container" cols="12" lg="3" md="2" sm="2">
@@ -69,12 +69,12 @@ export default {
   max-width: 600px;
   padding: 5px;
   transition: all 0.2s linear;
-  border-radius: 4px;
+  border-color: $accent2;
+  background-color: rgba(96, 29, 137, 0);
 }
 
 .experience-card:hover {
-  transform: $transform-scale-cards;
-  box-shadow: $bx-shadow;
+  box-shadow: $bx-shadow2;
 }
 
 .experience-card>.title {
