@@ -81,7 +81,7 @@ export default {
 
 .project-card:hover {
   transform: $transform-scale-cards;
-  box-shadow: $bx-shadow;
+  box-shadow: $bx-shadow2;
 }
 
 .project-card>.title {
