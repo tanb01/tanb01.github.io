@@ -7,7 +7,7 @@
             height="100%">
             <v-row align="center" justify="center" no-gutters>
               <v-col
-                :class="[$vuetify.breakpoint.mdAndUp ? 'text-left pb-16 pl-16 pt-16 mt-16' : 'text-left pa-4 mt-16 pt-16']"
+                :class="[$vuetify.breakpoint.mdAndUp ? 'text-left pb-16 pl-16 pt-16 mt-4' : 'text-left pa-4 mt-4 pt-16']"
                 cols="12" md="10" sm="7">
                 <h2 v-html="$t('hero.greeting')" :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h3-message']" />
                 <h1 v-html="$t('hero.name')" :class="[$vuetify.breakpoint.mdAndUp ? 'h1-message' : 'h3-message']" />
@@ -34,8 +34,13 @@
                   </v-row>
                 </v-carousel>
                 <h3 v-html="$t('hero.objective')"
-                  :class="[$vuetify.breakpoint.mdAndUp ? 'text-h4 mt-12' : 'text-h6 mt-6']" />
+                  :class="[$vuetify.breakpoint.mdAndUp ? 'text-h5 mt-10' : 'text-h6 mt-6']" />
               </v-col>
+            </v-row>
+            <v-row align="center" justify="center" no-gutters class="mb-12">
+              <v-btn href="/#projects" color="accent" elevation="0" :small="$vuetify.breakpoint.xsOnly"
+                class="animate__animated animate__fadeInUp">Explore my
+                advisory work</v-btn>
             </v-row>
           </v-parallax>
         </v-card>
@@ -91,7 +96,7 @@ export default {
 
 .h2-message {
   font-weight: 300px;
-  font-size: 3.75rem;
+  font-size: 3.25rem;
 }
 
 .h2-message-opacity {
