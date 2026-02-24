@@ -41,17 +41,17 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-row id="about" justify="center" align="center" no-gutters>
+    <!-- <v-row id="about" justify="center" align="center" no-gutters>
       <v-col class="pa-0">
         <AboutMePage />
       </v-col>
-    </v-row>
+    </v-row> -->
     <v-row id="projects" justify="center" align="center" no-gutters>
       <v-col class="pa-0">
         <ProjectPage />
       </v-col>
     </v-row>
-    <v-row id="experience" justify="center" align="center" no-gutters>
+    <!-- <v-row id="experience" justify="center" align="center" no-gutters>
       <v-col class="pa-0">
         <ExperiencePage />
       </v-col>
@@ -60,7 +60,7 @@
       <v-col class="pa-0">
         <EducationPage />
       </v-col>
-    </v-row>
+    </v-row> -->
   </div>
 </template>
 

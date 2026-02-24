@@ -1,7 +1,8 @@
 <template>
   <v-app>
     <v-navigation-drawer class="grey darken-4 mt-16 mx-2 rounded-lg" width="200px" mini-variant-width="72px"
-      v-model="drawer" :expand-on-hover="$vuetify.breakpoint.lgAndUp" floating :right="$vuetify.breakpoint.mdAndDown" app>
+      v-model="drawer" :expand-on-hover="$vuetify.breakpoint.lgAndUp" floating :right="$vuetify.breakpoint.mdAndDown"
+      app>
       <v-list rounded>
         <v-list-item-group mandatory active-class="accentDarken--text text--accent">
           <v-list-item v-for="(item, i) in items" :key="i" :to="{ path: localePath(item.to), hash: item.to.hash }"
@@ -21,7 +22,8 @@
         <v-col cols="8" class="d-flex offset-sm-2 offset-md-2 offset-lg-0 offset-xl-0"
           :class="$vuetify.breakpoint.lgAndUp ? 'justify-start' : 'justify-center'">
           <nuxt-link :to="localePath('/')" @click.native="handleScroll('home')">
-            <h2 v-text="title" class="v-app-bar-title white--text" :class="$vuetify.breakpoint.xsOnly ? 'text-h6' : ''" />
+            <h2 v-text="title" class="v-app-bar-title white--text"
+              :class="$vuetify.breakpoint.xsOnly ? 'text-h6' : ''" />
           </nuxt-link>
         </v-col>
         <v-col cols="1" class="d-flex justify-end ml-auto" :class="$vuetify.breakpoint.xsOnly ? 'pr-8' : ''">
