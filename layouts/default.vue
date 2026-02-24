@@ -69,30 +69,30 @@ export default {
           title: "Home",
           to: "/",
         },
-        {
-          id: "about",
-          icon: "mdi-shield-account",
-          title: "About Me",
-          to: { path: "/", hash: "#about" },
-        },
+        // {
+        //   id: "about",
+        //   icon: "mdi-shield-account",
+        //   title: "About Me",
+        //   to: { path: "/", hash: "#about" },
+        // },
         {
           id: "projects",
           icon: "mdi-clipboard-check-multiple-outline",
           title: "Projects",
           to: { path: "/", hash: "#projects" },
         },
-        {
-          id: "experience",
-          icon: "mdi-briefcase",
-          title: "Experience",
-          to: { path: "/", hash: "#experience" },
-        },
-        {
-          id: "education",
-          icon: "mdi-school",
-          title: "Education",
-          to: { path: "/", hash: "#education" },
-        }
+        // {
+        //   id: "experience",
+        //   icon: "mdi-briefcase",
+        //   title: "Experience",
+        //   to: { path: "/", hash: "#experience" },
+        // },
+        // {
+        //   id: "education",
+        //   icon: "mdi-school",
+        //   title: "Education",
+        //   to: { path: "/", hash: "#education" },
+        // }
       ],
     };
   },
