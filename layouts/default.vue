@@ -27,6 +27,7 @@
           </nuxt-link>
         </v-col>
         <v-col cols="1" class="d-flex justify-end ml-auto" :class="$vuetify.breakpoint.xsOnly ? 'pr-8' : ''">
+          <ThemeToggleButton />
           <LanguageMenu />
         </v-col>
         <v-col cols="1" class=" d-flex justify-end" v-if="$vuetify.breakpoint.mdAndDown">
@@ -45,6 +46,7 @@
 <script>
 import '@mdi/font/css/materialdesignicons.css'
 import LanguageMenu from "@/components/LanguageMenu";
+import ThemeToggleButton from "@/components/ThemeToggleButton";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 
