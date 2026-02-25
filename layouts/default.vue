@@ -8,10 +8,10 @@
           <v-list-item v-for="(item, i) in items" :key="i" :to="{ path: localePath(item.to), hash: item.to.hash }"
             @click.native="handleScroll(item.id)" exact>
             <v-list-item-icon>
-              <v-icon v-text="item.icon"></v-icon>
+              <v-icon v-text="item.icon" class="white--text"></v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title v-text="$t('navbar.' + item.id)" />
+              <v-list-item-title v-text="$t('navbar.' + item.id)" class="white--text" />
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>

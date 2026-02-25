@@ -1,15 +1,21 @@
 <template>
   <ProjectCardDialog :project="project">
     <template #activator="{ on, attrs }">
-      <v-card class="project-card darken" v-on="on" v-bind="attrs">
+      <v-card class="project-card" v-on="on" v-bind="attrs"
+        :color="$vuetify.theme.themes[$vuetify.theme.dark ? 'dark' : 'light'].primary">
         <v-row no-gutters class="mb-4">
           <v-col>
-            <h3 class="title white--text">{{ project.name }}</h3>
-            <h5 class="subtitle-text">
+            <h3 class="title"
+              :style="{ color: $vuetify.theme.themes[$vuetify.theme.dark ? 'dark' : 'light'].complement }">
+              {{
+                project.name }}</h3>
+            <h5 class="subtitle-text"
+              :style="{ color: $vuetify.theme.themes[$vuetify.theme.dark ? 'dark' : 'light'].darken }">
               {{ project.city.concat(', ', project.country) }} · {{ project.startDate | formatDate }} ·
               {{ duration(project.startDate, project.endDate) }}
             </h5>
-            <h5 class="description white--text">
+            <h5 class="description"
+              :style="{ color: $vuetify.theme.themes[$vuetify.theme.dark ? 'dark' : 'light'].complement }">
               {{ project.description }}
             </h5>
           </v-col>
@@ -17,7 +23,8 @@
         <v-row no-gutters>
           <v-col>
             <div>
-              <v-chip v-for="tag in project.tags" :key="project.id + tag" class="ma-1 accent2">
+              <v-chip v-for="tag in project.tags" :key="project.id + tag" class="ma-1" text-color="white"
+                :color="$vuetify.theme.themes[$vuetify.theme.dark ? 'dark' : 'light'].accent2">
                 {{ tag }}
               </v-chip>
             </div>

@@ -76,7 +76,7 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
-          darken: colors.grey.darken4,
+          darken: colors.grey.lighten3,
           complement: colors.shades.white
         },
         light: {
@@ -89,7 +89,7 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
-          darken: colors.grey.lighten3,
+          darken: colors.grey.darken4,
           complement: colors.shades.black
         }
       }
