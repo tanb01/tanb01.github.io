@@ -4,19 +4,17 @@
       <slot name="activator" :on="on" :attrs="attrs" />
     </template>
     <template v-slot:default="{ isActive }">
-      <v-card class="project-card-dialog">
-        <v-card-title class="title white--text">{{ project.name }}</v-card-title>
+      <v-card class="project-card-dialog"
+        :color="$vuetify.theme.themes[$vuetify.theme.dark ? 'dark' : 'light'].primary">
+        <v-card-title class="title" :color="$vuetify.theme.themes[$vuetify.theme.dark ? 'dark' : 'light'].primary">{{
+          project.name }}</v-card-title>
         <v-card-subtitle class="subtitle-text">
           {{ project.city.concat(', ', project.country) }} · {{ project.startDate | formatDate }} ·
           {{ duration(project.startDate, project.endDate) }}
         </v-card-subtitle>
-        <v-card-text class="description white--text">
+        <v-card-text class="description"
+          :style="{ color: $vuetify.theme.themes[$vuetify.theme.dark ? 'dark' : 'light'].complement }">
           {{ project.description }} </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn text="Disagree" variant="text" @click="isActive.value = false"></v-btn>
-          <v-btn color="surface-variant" text="Agree" variant="flat" @click="isActive.value = false"></v-btn>
-        </v-card-actions>
       </v-card>
     </template>
   </v-dialog>

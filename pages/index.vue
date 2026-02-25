@@ -128,7 +128,7 @@ export default {
 }
 
 .subtitle-text {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 300;
   color: $sub-text-color;
   font-style: italic;
