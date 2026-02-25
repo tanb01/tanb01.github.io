@@ -8,8 +8,19 @@
     <v-tabs-items v-model="tab" id="custom-tab-items">
       <v-tab-item key=0 :value="'tab-1'">
         <v-container class="fill-height pa-4" justify-center>
-          <vue-masonry-wall :items="sortedConsultingProjects" :options="{ width: 600, padding: 16 }"
-            :ssr="{ columns: 3 }">
+          <div v-if="loading" class="d-flex justify-center align-center" style="height: 300px;">
+            <v-progress-circular color="grey" indeterminate size="64" />
+          </div>
+          <vue-masonry-wall v-else :items="sortedConsultingProjects" :options="{
+            padding: 16,
+            animation: 0,
+            responsive: [
+              { maxWidth: 600, columns: 1 },
+              { maxWidth: 960, columns: 2 },
+              { maxWidth: 1280, columns: 3 },
+              { columns: 4 }
+            ]
+          }" :ssr="{ columns: 3 }">
             <template v-slot:default="{ item }">
               <ProjectCard :key="item.id" :project="item" />
             </template>
@@ -46,7 +57,14 @@ export default {
   data() {
     return {
       tab: null,
+      loading: true,
     }
+  },
+  mounted() {
+    // Simulate loading for demonstration, replace with real loading logic
+    setTimeout(() => {
+      this.loading = false;
+    }, 1200);
   },
   computed: {
     sortedConsultingProjects() {

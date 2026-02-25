@@ -75,7 +75,7 @@ export default {
 <style scoped lang="scss">
 .project-card {
   margin: 0 auto;
-  max-width: 500px;
+  width: 100%;
   padding: 20px;
   transition: all 0.2s linear;
   border-radius: 4px;
