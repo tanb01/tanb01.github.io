@@ -38,7 +38,7 @@
               </v-col>
             </v-row>
             <v-row align="center" justify="center" no-gutters class="mb-12">
-              <v-btn href="/#projects" color="accent" elevation="0" :small="$vuetify.breakpoint.xsOnly"
+              <v-btn href="/#missions" color="accent" elevation="0" :small="$vuetify.breakpoint.xsOnly"
                 class="animate__animated animate__fadeInUp">Explore my
                 advisory work</v-btn>
             </v-row>
@@ -51,7 +51,7 @@
         <AboutMePage />
       </v-col>
     </v-row> -->
-    <v-row id="projects" justify="center" align="center" no-gutters>
+    <v-row id="missions" justify="center" align="center" no-gutters>
       <v-col class="pa-0">
         <ProjectPage />
       </v-col>
@@ -146,7 +146,7 @@ a:link {
 }
 
 .quote {
-  font-size: 1.5rem !important;
+  font-size: 1.25rem !important;
   font-style: italic;
   font-weight: 300;
   text-align: center;

@@ -2,7 +2,7 @@ export default {
   navbar: {
     home: 'Home',
     about: 'About Me',
-    projects: 'Projects',
+    missions: 'Missions',
     experience: 'Experience',
     education: 'Education'
   },
@@ -25,13 +25,30 @@ export default {
     description: `<p>I am a <strong class="highlighted-content">Strategy and Transformation Consultant</strong> focusing on <strong class="highlighted-content">cybersecurity</strong> and <strong class="highlighted-content">cloud</strong> projects. I accompany clients on their security framework designs and cloud migrations. I hold dual master's degrees respectively in <strong class="highlighted-content">cybersecurity engineering</strong> and <strong class="highlighted-content">management consulting.</strong> With the knowledge and tools of these worlds, <strong class="highlighted-content">I protect my clients from cybercriminals in their daily operations.</strong></p><p> I am dynamic, analytical and I am constantly optimizing my methods. My insatiable hunger for knowledge has led me to work in various countries such as <strong class="highlighted-content">USA, France and Austria.</strong></p>`,
   },
   projects: {
-    title: "Featured Projects",
+    title: "Featured Missions",
     quote: `"The sum of repeated efforts"`,
     firstTab: "Consulting",
     secondTab: "Engineering",
     featured: [
       {
         consulting: [
+          {
+            name: "Cyber awareness strategy for a multinational firm",
+            startDate: "2024-01-08",
+            endDate: "2024-05-31",
+            city: "Nanterre",
+            description: "Conducted a cybersecurity awareness assessment and developed a 3-year strategy with a team of colleagues. Acted as PMO to facilitate, the integration and adoption of a new phishing platform, OutThink. Onboarded 44+ collaborators in Europe, APAC, LATAM,  NA in English, French and Spanish.",
+            country: "France",
+            tags: [
+              "Strategy consulting",
+              "Cyber awareness",
+              "Cybersecurity culture",
+              "Phishing",
+              "OutThink",
+              "PMO"
+            ],
+            id: "6"
+          },
           {
             name: "Cloud Migration for a Banking Leader",
             startDate: "2023-01-16",
@@ -110,25 +127,6 @@ export default {
             id: "1"
           },
           {
-            name: "Cyber awareness strategy for a multinational firm",
-            startDate: "2024-01-08",
-            endDate: "2024-05-31",
-            city: "Nanterre",
-            description: "Conducted a cybersecurity awareness assessment and developed a 3-year strategy with a team of colleagues. Acted as PMO to facilitate, the integration and adoption of a new phishing platform, OutThink. Onboarded 44+ collaborators in Europe, APAC, LATAM,  NA in English, French and Spanish.",
-            country: "France",
-            tags: [
-              "Strategy consulting",
-              "Cyber awareness",
-              "Cybersecurity culture",
-              "Phishing",
-              "OutThink",
-              "PMO"
-            ],
-            id: "6"
-          }
-        ],
-        engineering: [
-          {
             name: "ERP and Information Systems Tools Development",
             startDate: "2021-04-01",
             endDate: "2021-08-01",
@@ -147,6 +145,9 @@ export default {
             ],
             id: "0"
           }
+        ],
+        engineering: [
+
         ]
       }
     ]

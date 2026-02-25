@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer class="grey darken-4 mt-16 mx-2 rounded-lg" width="200px" mini-variant-width="72px"
+    <v-navigation-drawer class="transparent mt-16 mx-2 rounded-lg" width="200px" mini-variant-width="72px"
       v-model="drawer" :expand-on-hover="$vuetify.breakpoint.lgAndUp" floating :right="$vuetify.breakpoint.mdAndDown"
       app>
       <v-list rounded>
@@ -76,10 +76,10 @@ export default {
         //   to: { path: "/", hash: "#about" },
         // },
         {
-          id: "projects",
+          id: "missions",
           icon: "mdi-clipboard-check-multiple-outline",
-          title: "Projects",
-          to: { path: "/", hash: "#projects" },
+          title: "Missions",
+          to: { path: "/", hash: "#missions" },
         },
         // {
         //   id: "experience",
