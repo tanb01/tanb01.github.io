@@ -1,5 +1,5 @@
 <template>
-  <v-sheet class="page pageProject white--text" min-height="100vh">
+  <v-sheet class="page pageProject white--text">
     <v-row justify="center" no-gutters>
       <v-col align="center">
         <h1 v-html="$t('projects.title')" />
@@ -55,5 +55,6 @@ export default {
 <style lang="scss">
 .pageProject {
   background-image: $bg-image-light-accent;
+  min-height: 100dvh;
 }
 </style>

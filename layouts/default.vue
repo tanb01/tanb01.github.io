@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <v-navigation-drawer class="transparent mt-16 mx-2 rounded-lg" width="200px" mini-variant-width="72px"
-      v-model="drawer" :expand-on-hover="$vuetify.breakpoint.lgAndUp" floating :right="$vuetify.breakpoint.mdAndDown"
-      app>
+    <v-navigation-drawer class="mt-16 mx-2 rounded-lg" width="200px" mini-variant-width="72px" v-model="drawer"
+      :expand-on-hover="$vuetify.breakpoint.lgAndUp" floating :right="$vuetify.breakpoint.mdAndDown" :app="false"
+      temporary>
       <v-list rounded>
         <v-list-item-group mandatory active-class="accentDarken--text text--accent">
           <v-list-item v-for="(item, i) in items" :key="i" :to="{ path: localePath(item.to), hash: item.to.hash }"
