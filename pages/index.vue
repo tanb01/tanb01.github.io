@@ -2,48 +2,48 @@
   <div>
     <v-row no-gutters>
       <v-col class="pa-0 rounded-0">
-        <v-card>
-          <v-parallax class="hero-parallax rounded-0" :src="require('@/assets/img/low-poly-grid-banner.svg')"
-            height="100%">
-            <v-row align="center" justify="center" no-gutters>
-              <v-col
-                :class="[$vuetify.breakpoint.mdAndUp ? 'text-left pb-16 pl-16 pt-16 mt-4' : 'text-left pa-4 mt-4 pt-16']"
-                cols="12" md="10" sm="7">
-                <h2 v-html="$t('hero.greeting')" :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h3-message']" />
-                <h1 v-html="$t('hero.name')" :class="[$vuetify.breakpoint.mdAndUp ? 'h1-message' : 'h3-message']" />
-                <h2 v-html="$t('hero.position')"
-                  :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message h2-message-opacity' : 'h4-message h2-message-opacity']" />
-                <h2 v-html="$t('hero.endQuote')" :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h4-message']" />
-                <v-carousel continous cycle vertical reverse :interval="3000" :show-arrows="false" hide-delimiters
-                  hide-delimiter-background disabled height="100%">
-                  <v-row no-gutters>
-                    <v-col>
-                      <v-carousel-item>
-                        <h2 v-html="$t('hero.firstTitle')"
-                          :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h5-message']" />
-                      </v-carousel-item>
-                      <v-carousel-item>
-                        <h2 v-html="$t('hero.secondTitle')"
-                          :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h5-message']" />
-                      </v-carousel-item>
-                      <v-carousel-item>
-                        <h2 v-html="$t('hero.thirdTitle')"
-                          :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h5-message']" />
-                      </v-carousel-item>
-                    </v-col>
-                  </v-row>
-                </v-carousel>
-                <h3 v-html="$t('hero.objective')"
-                  :class="[$vuetify.breakpoint.mdAndUp ? 'text-h5 mt-10' : 'text-h6 mt-6']" />
-              </v-col>
-            </v-row>
-            <v-row align="center" justify="center" no-gutters class="mb-12">
-              <v-btn href="/#missions" color="accent" elevation="0" :small="$vuetify.breakpoint.xsOnly"
-                class="animate__animated animate__fadeInUp">Explore my
-                advisory work</v-btn>
-            </v-row>
-          </v-parallax>
-        </v-card>
+        <v-parallax class="hero-parallax rounded-0" :src="parallaxSrc" height="100%">
+          <v-row align="center" justify="center" no-gutters>
+            <v-col
+              :class="[$vuetify.breakpoint.mdAndUp ? 'text-left pb-16 pl-16 pt-16 mt-4' : 'text-left pa-4 mt-4 pt-16']"
+              cols="12" md="10" sm="7">
+              <h2 v-html="$t('hero.greeting')"
+                :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message complement--text' : 'h3-message complement--text']" />
+              <h1 v-html="$t('hero.name')"
+                :class="[$vuetify.breakpoint.mdAndUp ? 'h1-message complement--text' : 'h3-message complement--text']" />
+              <h2 v-html="$t('hero.position')"
+                :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message h2-message-opacity complement--text' : 'h4-message h2-message-opacity complement--text']" />
+              <h2 v-html="$t('hero.endQuote')"
+                :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message complement--text' : 'h4-message complement--text']" />
+              <v-carousel continous cycle vertical reverse :interval="3000" :show-arrows="false" hide-delimiters
+                hide-delimiter-background disabled height="100%">
+                <v-row no-gutters>
+                  <v-col>
+                    <v-carousel-item>
+                      <h2 v-html="$t('hero.firstTitle')"
+                        :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h5-message']" />
+                    </v-carousel-item>
+                    <v-carousel-item>
+                      <h2 v-html="$t('hero.secondTitle')"
+                        :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h5-message']" />
+                    </v-carousel-item>
+                    <v-carousel-item>
+                      <h2 v-html="$t('hero.thirdTitle')"
+                        :class="[$vuetify.breakpoint.mdAndUp ? 'h2-message' : 'h5-message']" />
+                    </v-carousel-item>
+                  </v-col>
+                </v-row>
+              </v-carousel>
+              <h3 v-html="$t('hero.objective')"
+                :class="[$vuetify.breakpoint.mdAndUp ? 'text-h5 mt-10' : 'text-h6 mt-6']" />
+            </v-col>
+          </v-row>
+          <v-row align="center" justify="center" no-gutters class="mb-12">
+            <v-btn href="/#missions" color="accent" elevation="0" :small="$vuetify.breakpoint.xsOnly"
+              class="animate__animated animate__fadeInUp">Explore my
+              advisory work</v-btn>
+          </v-row>
+        </v-parallax>
       </v-col>
     </v-row>
     <!-- <v-row id="about" justify="center" align="center" no-gutters>
@@ -78,7 +78,14 @@ import ProjectPage from "@/pages/project.vue";
 
 export default {
   name: "IndexPage",
-  components: { AboutMePage, ExperiencePage, EducationPage, ProjectPage }
+  components: { AboutMePage, ExperiencePage, EducationPage, ProjectPage },
+  computed: {
+    parallaxSrc() {
+      const light = '';
+      const dark = require('@/assets/img/low-poly-grid-banner.svg');
+      return this.$vuetify.theme.dark ? dark : light;
+    }
+  }
 };
 </script>
 
@@ -120,6 +127,15 @@ export default {
 
 .hero-parallax {
   min-height: 750px;
+  /* stretch to full viewport width and ignore scrollbar width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  /* avoid horizontal scroll when 100vw includes scrollbar */
+  box-sizing: border-box;
 }
 
 .subtitle {

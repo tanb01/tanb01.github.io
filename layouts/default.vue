@@ -8,10 +8,10 @@
           <v-list-item v-for="(item, i) in items" :key="i" :to="{ path: localePath(item.to), hash: item.to.hash }"
             @click.native="handleScroll(item.id)" exact>
             <v-list-item-icon>
-              <v-icon v-text="item.icon" class="white--text"></v-icon>
+              <v-icon v-text="item.icon" class="complement--text"></v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title v-text="$t('navbar.' + item.id)" class="white--text" />
+              <v-list-item-title v-text="$t('navbar.' + item.id)" class="complement--text" />
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
@@ -22,7 +22,7 @@
         <v-col cols="8" class="d-flex offset-sm-2 offset-md-2 offset-lg-0 offset-xl-0"
           :class="$vuetify.breakpoint.lgAndUp ? 'justify-start' : 'justify-center'">
           <nuxt-link :to="localePath('/')" @click.native="handleScroll('home')">
-            <h2 v-text="title" class="v-app-bar-title white--text"
+            <h2 v-text="title" class="v-app-bar-title complement--text"
               :class="$vuetify.breakpoint.xsOnly ? 'text-h6' : ''" />
           </nuxt-link>
         </v-col>

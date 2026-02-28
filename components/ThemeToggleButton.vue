@@ -1,6 +1,6 @@
 <template>
   <v-btn @click="toggleTheme" color="primary" icon>
-    <v-icon class="white--text">{{ themeIcon }}</v-icon>
+    <v-icon class="complement--text">{{ themeIcon }}</v-icon>
   </v-btn>
 </template>
 
